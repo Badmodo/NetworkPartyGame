@@ -15,23 +15,11 @@ namespace Platforms.Manager
         
       
 
-        // Start is called before the first frame update
         void Start()
         {
-            platformSpeed *= 0.05f;
-            
+            platformSpeed *= 5f;
+
             StartCoroutine(SpawnPlatform());
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public void StartSpawning()
-        {
-
         }
 
         IEnumerator SpawnPlatform()
@@ -56,7 +44,5 @@ namespace Platforms.Manager
 
             StartCoroutine(SpawnPlatform());
         }
-
     }
-
 }

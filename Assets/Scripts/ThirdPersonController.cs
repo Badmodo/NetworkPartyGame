@@ -8,7 +8,7 @@ using Photon.Realtime;
 using UnityEngine.UI;
 using TMPro;
 
-public class ThirdPersonController : MonoBehaviour
+public class ThirdPersonController : MonoBehaviourPunCallbacks
 {
     public CharacterController controller;
     public Transform camera;
@@ -27,7 +27,8 @@ public class ThirdPersonController : MonoBehaviour
 
     Rigidbody rb;
     PhotonView PV;
-    PlayerManager playerManager;
+    [HideInInspector]
+    public PlayerManager playerManager;
 
 
     Vector3 velocity;
@@ -48,7 +49,6 @@ public class ThirdPersonController : MonoBehaviour
         if (!PV.IsMine)
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
-            //Destroy(rb);
         }
     }
 
@@ -130,7 +130,7 @@ public class ThirdPersonController : MonoBehaviour
         //}
     }
 
-    void Die()
+    public void Die()
     {
         playerManager.Die();
     }

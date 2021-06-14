@@ -1215,6 +1215,7 @@ MonoBehaviour:
   gravity: -16
   turnSmoothTime: 0.1
   animator: {fileID: 7152423943543459502}
+  playerManager: {fileID: 0}
 --- !u!143 &8512265150098558843
 CharacterController:
   m_ObjectHideFlags: 0

@@ -1,12 +1,13 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lava : MonoBehaviour
+public class Lava : MonoBehaviourPunCallbacks
 {
     public float speed;
 
-    public GameObject player;
+    PlayerManager playerManager;
     public GameObject youDied;
 
     void Update()
@@ -16,10 +17,6 @@ public class Lava : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(player);
-            youDied.SetActive(true);
-        }
+        playerManager.Die();
     }
 }

@@ -9,7 +9,6 @@ namespace Platforms.Movement
     {
         Transform endPos;
         
-        // Start is called before the first frame update
         void OnEnable()
         {
             FindObjectOfType<PlatformManager>();
@@ -18,19 +17,13 @@ namespace Platforms.Movement
         }
 
         IEnumerator MovePlatform()
-        {
-            
-            
+        {       
             while (this.transform.position != endPos.position)
             {
-                this.transform.position = Vector3.MoveTowards(this.transform.position, endPos.position, platformSpeed);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, endPos.position, platformSpeed * 10);
 
                 yield return null;
-
             }
-
-
         }
     }
-
 }

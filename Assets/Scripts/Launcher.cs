@@ -86,9 +86,34 @@ public class Launcher : MonoBehaviourPunCallbacks
 		MenuManager.Instance.OpenMenu("error");
 	}
 
-	public void StartGame()
+	public void StartGame1()
 	{
 		PhotonNetwork.LoadLevel(1);
+	}
+	
+	public void StartGame2()
+	{
+		PhotonNetwork.LoadLevel(2);
+	}
+	
+	public void StartGame3()
+	{
+		PhotonNetwork.LoadLevel(3);
+	}
+	
+	public void StartGame4()
+	{
+		PhotonNetwork.LoadLevel(4);
+	}
+	
+	public void StartGame5()
+	{
+		PhotonNetwork.LoadLevel(5);
+	}
+	
+	public void StartGame6()
+	{
+		PhotonNetwork.LoadLevel(6);
 	}
 
 	public void LeaveRoom()
