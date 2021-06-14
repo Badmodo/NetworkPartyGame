@@ -17,6 +17,9 @@ public class Lava : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider other)
     {
-        playerManager.Die();
+        if (other.gameObject.tag == "Player")
+        {
+            playerManager.Die();
+        }
     }
 }
