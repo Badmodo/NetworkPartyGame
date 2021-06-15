@@ -281,7 +281,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		}
 	}
 
-	void Die()
+	public void Die()
 	{
 		playerManager.Die();
 	}

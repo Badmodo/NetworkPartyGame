@@ -7,7 +7,6 @@ public class Lava : MonoBehaviourPunCallbacks
 {
     public float speed;
 
-    PlayerManager playerManager;
     public GameObject youDied;
 
     void Update()
@@ -19,7 +18,8 @@ public class Lava : MonoBehaviourPunCallbacks
     {
         if (other.gameObject.tag == "Player")
         {
-            playerManager.Die();
+            ThirdPersonController playerController = other.GetComponent<ThirdPersonController>();
+            playerController.Die();
         }
     }
 }
