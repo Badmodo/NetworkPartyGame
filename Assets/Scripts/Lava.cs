@@ -7,8 +7,6 @@ public class Lava : MonoBehaviourPunCallbacks
 {
     public float speed;
 
-    public GameObject youDied;
-
     void Update()
     {
         transform.position += Vector3.up * speed * Time.deltaTime;
